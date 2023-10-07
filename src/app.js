@@ -7,5 +7,30 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
-  console.log("Hello Rigo from the console!");
+  let who = ["The baby", "The shark", "His dog", "My kids"];
+  let action = ["ate", "peed", "crushed", "broke"];
+  let what = ["my homework", "the keys", "the car"];
+  let when = [
+    "before class",
+    "right on time",
+    "when I left the house",
+    "during my lunch",
+    "while I was praying"
+  ];
+
+  function randomElement(array) {
+    return array[Math.floor(Math.random() * array.length)];
+  }
+
+  let jencuse =
+    randomElement(who) +
+    " " +
+    randomElement(action) +
+    " " +
+    randomElement(what) +
+    " " +
+    randomElement(when);
+
+  const jElement = document.getElementsByTagName("p");
+  jElement[0].innerText = jencuse;
 };
